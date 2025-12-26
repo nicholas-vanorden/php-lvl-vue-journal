@@ -51,7 +51,7 @@ const submit = () => {
                                 <InputLabel for="content" value="Content" />
                                 <textarea
                                     id="content"
-                                    class="mt-1 block w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm"
+                                    class="mt-1 block w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm font-handwriting"
                                     v-model="form.content"
                                     rows="10"
                                 ></textarea>

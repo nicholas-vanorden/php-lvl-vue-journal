@@ -63,7 +63,7 @@ const deleteEntry = (id) => {
                                     <h3 class="text-lg font-bold text-gray-900 dark:text-gray-100">{{ entry.title || 'Untitled Entry' }}</h3>
                                     <span class="text-sm text-gray-500 dark:text-gray-400">{{ new Date(entry.created_at).toLocaleDateString() }}</span>
                                 </div>
-                                <p class="text-gray-700 dark:text-gray-300 mb-2">{{ entry.content.substring(0, 200) }}<span v-if="entry.content.length > 200">...</span></p>
+                                <p class="text-gray-700 dark:text-gray-300 mb-2 font-handwriting">{{ entry.content.substring(0, 200) }}<span v-if="entry.content.length > 200">...</span></p>
                                 <div class="flex flex-wrap gap-2 mb-2">
                                     <span v-for="tag in entry.tags" :key="tag.id" class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200">
                                         {{ tag.name }}
