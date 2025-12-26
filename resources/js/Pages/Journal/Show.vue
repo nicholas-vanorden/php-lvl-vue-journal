@@ -22,7 +22,7 @@ const props = defineProps({
                         <div class="mb-4 text-sm text-gray-500 dark:text-gray-400">
                             {{ new Date(journalEntry.created_at).toLocaleString() }}
                         </div>
-                        <p class="text-gray-700 dark:text-gray-300 mb-4">{{ journalEntry.content }}</p>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4 font-handwriting">{{ journalEntry.content }}</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span v-for="tag in journalEntry.tags" :key="tag.id" class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200">
                                 {{ tag.name }}
