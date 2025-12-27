@@ -43,7 +43,7 @@ const deleteEntry = (id) => {
                                 New Entry
                             </Link>
                             <div class="relative">
-                                <select v-model="filterTag" class="block appearance-none w-full bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 py-2 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white dark:focus:bg-gray-700 focus:border-gray-500 dark:focus:border-gray-500">
+                                <select v-model="filterTag" class="block appearance-none w-full bg-white dark:bg-gray-700 border border-transparent text-gray-700 dark:text-gray-300 py-2 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white dark:focus:bg-gray-700 focus:border-gray-500 dark:focus:border-gray-500">
                                     <option value="">All Tags</option>
                                     <option v-for="tag in allTags" :key="tag.id" :value="tag.name">{{ tag.name }}</option>
                                 </select>
