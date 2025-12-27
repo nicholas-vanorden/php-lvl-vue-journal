@@ -261,7 +261,7 @@ initializeTheme();
             </header>
 
             <!-- Page Content -->
-            <main>
+            <main class="bg-gradient-to-t from-orange-200/40 to-pink-200/30 dark:from-orange-900/30 dark:to-pink-900/20">
                 <slot />
             </main>
         </div>
