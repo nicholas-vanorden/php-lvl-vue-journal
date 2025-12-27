@@ -4,7 +4,7 @@ import InputError from '@/Components/InputError.vue';
 import InputLabel from '@/Components/InputLabel.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
-import { Head, useForm } from '@inertiajs/vue3';
+import { Head, Link, useForm } from '@inertiajs/vue3';
 
 const form = useForm({
     title: '',
@@ -37,7 +37,7 @@ const submit = () => {
                                 <TextInput
                                     id="title"
                                     type="text"
-                                    class="mt-1 block w-full"
+                                    class="mt-1 block w-full bg-gray-50 dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100 focus:border-indigo-500 dark:focus:border-indigo-400 focus:ring-indigo-500 dark:focus:ring-indigo-400"
                                     v-model="form.title"
                                     autocomplete="title"
                                 />
@@ -48,7 +48,7 @@ const submit = () => {
                                 <InputLabel for="content" value="Content" />
                                 <textarea
                                     id="content"
-                                    class="mt-1 block w-full border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm font-handwriting"
+                                    class="mt-1 block w-full bg-gray-50 dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100 focus:border-indigo-500 dark:focus:border-indigo-400 focus:ring-indigo-500 dark:focus:ring-indigo-400 rounded-md shadow-sm font-handwriting"
                                     v-model="form.content"
                                     rows="10"
                                 ></textarea>
@@ -60,14 +60,17 @@ const submit = () => {
                                 <TextInput
                                     id="tags"
                                     type="text"
-                                    class="mt-1 block w-full"
+                                    class="mt-1 block w-full bg-gray-50 dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100 focus:border-indigo-500 dark:focus:border-indigo-400 focus:ring-indigo-500 dark:focus:ring-indigo-400"
                                     v-model="form.tags"
                                     autocomplete="tags"
                                 />
                                 <InputError class="mt-2" :message="form.errors.tags" />
                             </div>
 
-                            <div class="flex items-center justify-end mt-4">
+                            <div class="flex items-center justify-end mt-4 space-x-4">
+                                <Link :href="route('journal.index')" class="inline-flex items-center px-4 py-2 bg-gray-300 dark:bg-gray-600 border border-transparent rounded-md font-semibold text-xs text-gray-700 dark:text-gray-200 uppercase tracking-widest hover:bg-gray-400 dark:hover:bg-gray-500 hover:cursor-pointer focus:bg-gray-400 dark:focus:bg-gray-500 active:bg-gray-500 dark:active:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500 dark:focus:ring-gray-400 focus:ring-offset-2 transition ease-in-out duration-150">
+                                    Cancel
+                                </Link>
                                 <PrimaryButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
                                     Post Entry
                                 </PrimaryButton>
