@@ -1,6 +1,6 @@
-# 📖 PHP & Vue Journal
+# php-lvl-vue-journal
 
-A beautiful, modern journaling web application built with PHP, Laravel, and Vue.js. Write, organize, and reflect on your thoughts with a sleek interface featuring dark/light themes, elegant typography, and sunset-inspired gradients.
+A beautiful, quaint little journaling web application built with PHP, Laravel, and Vue.js. Write, organize, and reflect on your thoughts with a sleek interface featuring dark/light themes, elegant typography, and sunset-inspired gradients.
 
 ## ✨ Features
 
